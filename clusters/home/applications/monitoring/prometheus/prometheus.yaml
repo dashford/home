@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: prometheus
 spec:
-  releaseName:  prometheus
+  releaseName: prometheus
   chart:
     spec:
       chart: prometheus
