@@ -4,6 +4,7 @@
 
 - [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [flux](https://fluxcd.io/docs/installation/#install-the-flux-cli)
+- [kubeseal](https://github.com/bitnami-labs/sealed-secrets)
 
 ## Create k8s Cluster
 
