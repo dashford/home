@@ -20,3 +20,4 @@ spec:
         default: true
       service:
         type: NodePort
+      watchIngressWithoutClass: true
