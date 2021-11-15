@@ -20,8 +20,6 @@ spec:
         enabled: true
       ingressClassResource:
         default: true
-#      publishService:
-#        enabled: false
       service:
         type: NodePort
       watchIngressWithoutClass: true
