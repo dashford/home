@@ -16,6 +16,6 @@ spec:
   interval: 5m
   values:
     adminUser:
-      existingSecret: influxdb-auth
+#      existingSecret: influxdb-auth
       organization: dashford
       bucket: homeassistant
