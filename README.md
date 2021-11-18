@@ -2,17 +2,17 @@
 
 ## Required Tooling
 
-- [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
+- [k3s](https://rancher.com/docs/k3s/latest/en/installation/install-options/)
 - [flux](https://fluxcd.io/docs/installation/#install-the-flux-cli)
 - [kubeseal](https://github.com/bitnami-labs/sealed-secrets)
 - [helm](https://github.com/helm/helm/releases)
 
 ## Create k8s Cluster
 
-home runs on kubernetes using the `kind` binary. To create the cluster, run
+home runs on kubernetes using the `k3s` binary. To create the cluster, run
 
 ```shell
-kind create cluster --config=config.yaml
+k3s server --config=k3s-config.yaml
 ```
 
 ## Bootstrap Flux
