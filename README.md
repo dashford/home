@@ -50,7 +50,7 @@ microk8s enable dns
 
 ```shell
 export GITHUB_TOKEN=<your-token>
-export GITHUB_USER=<your-username>
+export GITHUB_USER=dashford
 
 flux bootstrap github --owner=dashford --repository=home --branch=main --path=./clusters/home --personal
 ```
