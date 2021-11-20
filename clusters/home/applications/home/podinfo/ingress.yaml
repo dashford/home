@@ -6,8 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "*"
-      http:
+    - http:
         paths:
           - pathType: ImplementationSpecific
             backend:
@@ -15,3 +14,4 @@ spec:
                 name: podinfo
                 port:
                   number: 9898
+#      host: "podinfo.home.arpa"
