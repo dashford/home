@@ -2,17 +2,48 @@
 
 ## Required Tooling
 
-- [k3s](https://rancher.com/docs/k3s/latest/en/installation/install-options/)
+- [microk8s](https://microk8s.io/)
 - [flux](https://fluxcd.io/docs/installation/#install-the-flux-cli)
 - [kubeseal](https://github.com/bitnami-labs/sealed-secrets)
 - [helm](https://github.com/helm/helm/releases)
+- kubectx
+- kubens
 
 ## Create k8s Cluster
 
-home runs on kubernetes using the `k3s` binary. To create the cluster, run
+home runs on kubernetes using the `microk8s` framework. To create the cluster, run
 
 ```shell
-k3s server --config=k3s-config.yaml
+sudo snap install microk8s --classic --channel=1.21/stable
+```
+
+> At time of writing, `1.21` was the latest release.
+
+Join the required Linux groups
+
+```shell
+sudo usermod -a -G microk8s $USER
+sudo chown -f -R $USER ~/.kube
+```
+
+You can check on the status by running
+
+```shell
+microk8s status
+```
+
+### Accessing the Cluster
+
+Copy the generated kubeconfig file into your `~/.kube` directory i.e.
+
+```shell
+microk8s config > ~/.kube/config
+```
+
+### Install Required Addons
+
+```shell
+microk8s enable dns
 ```
 
 ## Bootstrap Flux
@@ -70,4 +101,16 @@ $ kubectl -n default get secrets basic-auth
 
 NAME         TYPE     DATA   AGE
 basic-auth   Opaque   2      1m43s
+```
+
+## Operations
+
+A handy list of operations that may need to be frequently run.
+
+### Stop/Start `microk8s`
+
+```shell
+microk8s start
+[...]
+microk8s stop
 ```
