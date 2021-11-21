@@ -13,5 +13,3 @@ data:
 
     allow_anonymous false
     password_file /mosquitto/config/passwd
-
-    port 1883
