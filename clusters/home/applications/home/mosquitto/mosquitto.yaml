@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mosquitto
+  namespace: home
+  labels:
+    app.kubernetes.io/name: mosquitto
+    app.kubernetes.io/part-of: mosquitto
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: mosquitto
+          image: eclipse-mosquitto:2.0.14
+          imagePullPolicy: IfNotPresent
+#          env:
+#            - name:
+#          startupProbe:
+#          livenessProbe:
+#          readinessProbe:
+          ports:
+            - name: mqtt
+              containerPort: 1883
+              protocol: TCP
+            - name: mqtts
+              containerPort: 8883
+              protocol: TCP
+#          resources:
+          volumeMounts:
+            - mountPath: /mosquitto/config
+              name: configuration
+              readOnly: true
+      volumes:
+        - name: configuration
+          configMap:
+            name: mosquitto-config
+            items:
+              - key: mosquitto.conf
+                path: mosquitto.conf
