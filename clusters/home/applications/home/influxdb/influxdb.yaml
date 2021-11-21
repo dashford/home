@@ -19,3 +19,5 @@ spec:
 #      existingSecret: influxdb-auth
       organization: dashford
       bucket: homeassistant
+    persistence:
+      storageClass: microk8s-hostpath
