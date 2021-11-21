@@ -44,6 +44,7 @@ microk8s config > ~/.kube/config
 
 ```shell
 microk8s enable dns
+microk8s enable storage
 ```
 
 ## Bootstrap Flux

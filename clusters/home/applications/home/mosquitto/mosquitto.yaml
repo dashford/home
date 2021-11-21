@@ -7,6 +7,9 @@ metadata:
     app.kubernetes.io/name: mosquitto
     app.kubernetes.io/part-of: mosquitto
 spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: mosquitto
   replicas: 1
   template:
     spec:
