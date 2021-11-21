@@ -65,7 +65,7 @@ The `sealed-secrets-controller` runs in the `infrastructure` namespace. The publ
 in the `./sealed-secrets` directory.
 
 ```shell
-kubeseal --fetch-cert --controller-name=sealed-secrets-controller --controller-namespace=infrastructure
+kubeseal --fetch-cert --context microk8s --controller-name=sealed-secrets-controller --controller-namespace=infrastructure
 ```
 
 ### Adding a new Secret
