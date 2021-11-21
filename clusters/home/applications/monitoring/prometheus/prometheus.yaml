@@ -14,3 +14,10 @@ spec:
         name: prometheus-community
         namespace: flux-system
   interval: 5m
+  values:
+    alertmanager:
+      persistentVolume:
+        storageClass: microk8s-hostpath
+    server:
+      persistentVolume:
+        storageClass: microk8s-hostpath
