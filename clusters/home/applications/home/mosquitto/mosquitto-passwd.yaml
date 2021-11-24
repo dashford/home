@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: mosquito-passwd
+  namespace: home
+spec:
+  encryptedData:
+    passwd: AgBELZi0Wz/ugFeRhnUYqZKUzwY8kziSpID82Yg++aLFhBiRcL7MaDoz1fT9QmJgLHNbaO4wp4otpdnTPaIwqwGoWUJEy/B44wmqv8aiyok0naK2TkVdJ31GvW0LSPw1guL9zUTj/+Es9qfHb8g3jMQGVgepg94WPkAvHqrdjx1Hujl+Havo7B1WeAlgkxuRKs5vPQ+KwKiY5vkVRoUaPoiJ2BtkCsuemtCxDAcQowabYvC9sL61bXW9AUCIBtbp+id+dAvu2+QbPMSW+RX+Y664OXD9/T3VnoeW2wVtOpjf8XpdOQos3+RrGgPvtPQRm0V3JYQtmRDv66A71PVh0HNtC8erv4QS3gl4sSGQ8+4M8XcKZSksRnVH//RyQTgk/2IwkqGeM7n6Z6VSL/N76uKDwxXIO/4SYYxhsr90TPxB0xjUePuG0XLt30783/kVgUW72nRvp67fxOvVYMLTaGRMSc0VzLiIk1O5IMmuizAyZe4ZrsolIvOxixCBLOm8Ft/SBt7LgFNaNvHWloVH5re3IPN6o7pH8Wh1EngBAq6nQalQV35Lx5ruVhsAevrSz+0ccJHSffbYjquqzsfvY5O2hZpKVqv76Ycgkl/M1k6Sn22kGquezC1Yv1YQz+KlCLriWe5APUFJb0oZsuGK7z+Zy1RuzE5p4/VjICA/S6t5iAv3AMIJGWmYtDltAZI2P32XvwIuN8jKxwPDtk404OQg4W9WCWkPfbtRhXXf02qXNUIvogrYE+E283/3ULmNNCJYgdSnK+KrqBD4bU2mu1qKlLtKIFIRizyHirbwHrV1qEF5xX864bY9UmaTSjxhL0zScS5u9hl3Dcl/KggcA76Z0PhPt3KfmQ==
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: mosquito-passwd
+      namespace: home
+
