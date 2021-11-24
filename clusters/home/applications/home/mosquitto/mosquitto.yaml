@@ -37,7 +37,7 @@ spec:
             - mountPath: /mosquitto/config
               name: configuration
               readOnly: true
-            - mountPath: /mosquitto/config
+            - mountPath: /mosquitto
               name: passwd
               readOnly: true
       volumes:
@@ -52,4 +52,4 @@ spec:
             secretName: mosquitto-passwd
             items:
               - key: passwd
-                path: passwd
+                path: config/passwd
