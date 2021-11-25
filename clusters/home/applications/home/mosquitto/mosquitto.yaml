@@ -20,13 +20,6 @@ spec:
         - name: mosquitto
           image: eclipse-mosquitto:2.0.14
           imagePullPolicy: IfNotPresent
-#          args:
-#            - --config-file=/home/mosquitto/config/mosquitto.conf
-#          env:
-#            - name:
-#          startupProbe:
-#          livenessProbe:
-#          readinessProbe:
           ports:
             - name: mqtt
               containerPort: 1883
@@ -34,7 +27,13 @@ spec:
             - name: mqtts
               containerPort: 8883
               protocol: TCP
-#          resources:
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "250m"
           volumeMounts:
             - mountPath: /mosquitto/config
               name: configuration
@@ -50,6 +49,3 @@ spec:
         - name: passwd
           secret:
             secretName: mosquitto-passwd
-#            items:
-#              - key: passwd
-#                path: config/passwd
