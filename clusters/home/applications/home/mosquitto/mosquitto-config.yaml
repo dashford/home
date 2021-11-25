@@ -12,4 +12,4 @@ data:
     log_dest stderr
 
     allow_anonymous false
-    password_file /mosquitto/config/passwd
+    password_file /home/mosquitto/passwd
