@@ -14,4 +14,7 @@ data:
     allow_anonymous false
     password_file /home/mosquitto/passwd
 
+    port 1883
+
     listener 1883
+    protocol mqtt
