@@ -50,6 +50,6 @@ spec:
         - name: passwd
           secret:
             secretName: mosquitto-passwd
-            items:
-              - key: passwd
-                path: config/passwd
+#            items:
+#              - key: passwd
+#                path: config/passwd
