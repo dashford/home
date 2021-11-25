@@ -13,3 +13,5 @@ data:
 
     allow_anonymous false
     password_file /home/mosquitto/passwd
+
+    listener 1883
