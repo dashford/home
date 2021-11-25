@@ -20,8 +20,8 @@ spec:
         - name: mosquitto
           image: eclipse-mosquitto:2.0.14
           imagePullPolicy: IfNotPresent
-          args:
-            - --config-file=/home/mosquitto/config/mosquitto.conf
+#          args:
+#            - --config-file=/home/mosquitto/config/mosquitto.conf
 #          env:
 #            - name:
 #          startupProbe:
@@ -36,7 +36,7 @@ spec:
               protocol: TCP
 #          resources:
           volumeMounts:
-            - mountPath: /home/mosquitto/config
+            - mountPath: /mosquitto/config
               name: configuration
             - mountPath: /home/mosquitto
               name: passwd
