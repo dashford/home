@@ -26,5 +26,8 @@ spec:
         level: DEBUG
       access:
         enabled: true
+    ports:
+      web:
+        nodePort: 32080
     service:
       type: NodePort
