@@ -21,5 +21,10 @@ spec:
     ingressRoute:
       dashboard:
         enabled: false
+    logs:
+      general:
+        level: DEBUG
+      access:
+        enabled: true
     service:
       type: NodePort
