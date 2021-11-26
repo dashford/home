@@ -26,6 +26,7 @@ spec:
         level: DEBUG
       access:
         enabled: true
+    hostNetwork: true
     ports:
       web:
         nodePort: 32080
