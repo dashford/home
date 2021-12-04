@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: mosquitto
     app.kubernetes.io/part-of: mosquitto
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   rules:
     - host: "mosquitto.home.arpa"
       http:
