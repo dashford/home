@@ -18,9 +18,6 @@ spec:
     ingressClass:
       enabled: true
       isDefaultClass: true
-    ingressRoute:
-      dashboard:
-        enabled: false
     logs:
       general:
         level: DEBUG
