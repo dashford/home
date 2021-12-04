@@ -26,5 +26,3 @@ spec:
         level: DEBUG
       access:
         enabled: true
-    service:
-      type: NodePort
