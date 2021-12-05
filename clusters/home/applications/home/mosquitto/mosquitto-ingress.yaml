@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: mosquitto
   namespace: home
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: test
   labels:
     app.kubernetes.io/name: mosquitto
     app.kubernetes.io/part-of: mosquitto
