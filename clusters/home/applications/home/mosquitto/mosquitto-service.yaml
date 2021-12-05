@@ -7,6 +7,7 @@ metadata:
   name: mosquitto
   namespace: home
 spec:
+  type: LoadBalancer
   ports:
     - name: mqtt
       port: 1883

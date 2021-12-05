@@ -23,9 +23,3 @@ spec:
         level: DEBUG
       access:
         enabled: true
-    ports:
-      test:
-        port: 1883
-        expose: true
-        exposedPort: 1883
-        protocol: TCP

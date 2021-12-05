@@ -20,20 +20,3 @@
 #                name: mosquitto
 #                port:
 #                  number: 1883
-
----
-
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: mosquitto-test
-  namespace: home
-spec:
-  entryPoints:
-    - test
-  routes:
-    - match: Host(`mosquitto.home.arpa`)
-      kind: Rule
-      services:
-        - name: mosquitto
-          port: 1883
