@@ -17,22 +17,22 @@ spec:
   values:
     admin:
       existingSecret: grafana-auth
-    datasources:
-      datasources.yaml:
-        apiVersion: 1
-        datasources:
-          - name: InfluxDB
-            type: influxdb
-            orgId: 1
-            url: influxdb.home.svc
-            user: influxdb-read
-            database: home_assistant
-            withCredentials: true
-            isDefault: false
-            version: 1
-            editable: false
-            secureJsonData:
-              password: ${INFLUXDBHA_READ_USER_PASSWORD}
+#    datasources:
+#      datasources.yaml:
+#        apiVersion: 1
+#        datasources:
+#          - name: InfluxDB
+#            type: influxdb
+#            orgId: 1
+#            url: influxdb.home.svc
+#            user: influxdb-read
+#            database: home_assistant
+#            withCredentials: true
+#            isDefault: false
+#            version: 1
+#            editable: false
+#            secureJsonData:
+#              password: ${INFLUXDBHA_READ_USER_PASSWORD}
     ingress:
       enabled: true
       ingressClassName: traefik
