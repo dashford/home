@@ -38,6 +38,7 @@ spec:
         - name: configuration
           configMap:
             name: home-assistant-config
+            defaultMode: 0777
             items:
               - key: configuration.yaml
                 path: configuration.yaml
