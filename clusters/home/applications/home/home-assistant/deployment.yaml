@@ -28,7 +28,7 @@ spec:
           image: homeassistant/home-assistant:2021.12.3
           imagePullPolicy: IfNotPresent
           ports:
-            - name: web
+            - name: http
               containerPort: 8123
               protocol: TCP
 #          resources:
