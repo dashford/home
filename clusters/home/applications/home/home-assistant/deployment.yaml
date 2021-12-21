@@ -16,13 +16,13 @@ spec:
       labels:
         app.kubernetes.io/name: home-assitant
     spec:
-      initContainers:
-        - name: init-permissions
-          image: busybox:stable
-          command: ['sh', '-c', 'chmod -R 777 /config']
-          volumeMounts:
-            - mountPath: /config
-              name: configuration
+#      initContainers:
+#        - name: init-permissions
+#          image: busybox:stable
+#          command: ['sh', '-c', 'chmod -R 777 /config']
+#          volumeMounts:
+#            - mountPath: /config
+#              name: configuration
       containers:
         - name: home-assistant
           image: homeassistant/home-assistant:2021.12.3
@@ -38,13 +38,13 @@ spec:
 #            limits:
 #              memory: "128Mi"
 #              cpu: "250m"
-          volumeMounts:
-            - mountPath: /config
-              name: configuration
-      volumes:
-        - name: configuration
-          configMap:
-            name: home-assistant-config
-            items:
-              - key: configuration.yaml
-                path: configuration.yaml
+#          volumeMounts:
+#            - mountPath: /config
+#              name: configuration
+#      volumes:
+#        - name: configuration
+#          configMap:
+#            name: home-assistant-config
+#            items:
+#              - key: configuration.yaml
+#                path: configuration.yaml
