@@ -21,7 +21,7 @@ spec:
           image: busybox:stable
           command: ['sh', '-c', 'chmod 777 /config']
       containers:
-        - name: home-assitant
+        - name: home-assistant
           image: homeassistant/home-assistant:2021.12.3
           imagePullPolicy: IfNotPresent
           ports:
