@@ -16,6 +16,10 @@ spec:
       labels:
         app.kubernetes.io/name: home-assitant
     spec:
+      initContainers:
+        - name: init-permissions
+          image: busybox:stable
+          command: ['sh', '-c', 'chmod 777 /config']
       containers:
         - name: home-assitant
           image: homeassistant/home-assistant:2021.12.3
