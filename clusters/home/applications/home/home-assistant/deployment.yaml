@@ -20,6 +20,9 @@ spec:
         - name: init-permissions
           image: busybox:stable
           command: ['sh', '-c', 'chmod 777 /config']
+          volumeMounts:
+            - mountPath: /config
+              name: configuration
       containers:
         - name: home-assistant
           image: homeassistant/home-assistant:2021.12.3
