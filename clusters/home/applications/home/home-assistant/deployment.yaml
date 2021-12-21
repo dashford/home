@@ -19,7 +19,7 @@ spec:
       initContainers:
         - name: init-permissions
           image: busybox:stable
-          command: ['sh', '-c', 'echo "hello"']
+          command: ['sh', '-c', 'chmod -R 777 /config']
           volumeMounts:
             - mountPath: /config
               name: configuration
