@@ -1,50 +1,50 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: home-assistant
-  namespace: home
-  labels:
-    app.kubernetes.io/name: home-assistant
-    app.kubernetes.io/part-of: home-assistant
-spec:
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: home-assistant
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: home-assistant
-    spec:
-#      initContainers:
-#        - name: init-permissions
-#          image: busybox:stable
-#          command: ['sh', '-c', 'chmod -R 777 /config']
-#          volumeMounts:
-#            - mountPath: /config
-#              name: configuration
-      containers:
-        - name: home-assistant
-          image: homeassistant/home-assistant:2021.12.3
-          imagePullPolicy: IfNotPresent
-          ports:
-            - name: http
-              containerPort: 8123
-              protocol: TCP
-#          resources:
-#            requests:
-#              memory: "64Mi"
-#              cpu: "100m"
-#            limits:
-#              memory: "128Mi"
-#              cpu: "250m"
-#          volumeMounts:
-#            - mountPath: /config
-#              name: configuration
-#      volumes:
-#        - name: configuration
-#          configMap:
-#            name: home-assistant-config
-#            items:
-#              - key: configuration.yaml
-#                path: configuration.yaml
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: home-assistant
+#  namespace: home
+#  labels:
+#    app.kubernetes.io/name: home-assistant
+#    app.kubernetes.io/part-of: home-assistant
+#spec:
+#  selector:
+#    matchLabels:
+#      app.kubernetes.io/name: home-assistant
+#  replicas: 1
+#  template:
+#    metadata:
+#      labels:
+#        app.kubernetes.io/name: home-assistant
+#    spec:
+##      initContainers:
+##        - name: init-permissions
+##          image: busybox:stable
+##          command: ['sh', '-c', 'chmod -R 777 /config']
+##          volumeMounts:
+##            - mountPath: /config
+##              name: configuration
+#      containers:
+#        - name: home-assistant
+#          image: homeassistant/home-assistant:2021.12.3
+#          imagePullPolicy: IfNotPresent
+#          ports:
+#            - name: http
+#              containerPort: 8123
+#              protocol: TCP
+##          resources:
+##            requests:
+##              memory: "64Mi"
+##              cpu: "100m"
+##            limits:
+##              memory: "128Mi"
+##              cpu: "250m"
+##          volumeMounts:
+##            - mountPath: /config
+##              name: configuration
+##      volumes:
+##        - name: configuration
+##          configMap:
+##            name: home-assistant-config
+##            items:
+##              - key: configuration.yaml
+##                path: configuration.yaml
