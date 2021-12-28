@@ -47,13 +47,14 @@ spec:
                 secretKeyRef:
                   name: zigbee2mqtt-secret
                   key: mqtt-password
-#          volumeMounts:
-#            - mountPath: /config
-#              name: configuration
-#      volumes:
-#        - name: configuration
-#          configMap:
-#            name: zigbee2mqtt-config
-#            items:
-#              - key: configuration.yaml
-#                path: configuration.yaml
+          volumeMounts:
+            - mountPath: /app/data/configuration.yaml
+              name: configuration
+              subPath: configuration.yaml
+      volumes:
+        - name: configuration
+          configMap:
+            name: zigbee2mqtt-config
+            items:
+              - key: configuration.yaml
+                path: configuration.yaml
