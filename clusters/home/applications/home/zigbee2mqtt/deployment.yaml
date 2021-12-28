@@ -27,6 +27,8 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "250m"
+          securityContext:
+            privileged: true
           env:
             - name: TZ
               value: Europe/Dublin
