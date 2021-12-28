@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/name: zigbee2mqtt
+    app.kubernetes.io/part-of: zigbee2mqtt
+  name: zigbee2mqtt-config
+  namespace: home
+data:
+  configuration.yaml: |
+    # Home Assistant integration (MQTT discovery)
+    homeassistant: true
+
+    # allow new devices to join
+    permit_join: false
+
+    advanced:
+      channel: 15
+
+    mqtt:
+      base_topic: zigbee2mqtt
+      client_id: zigbee2mqtt
+      server: 'mqtt://localhost'
+
+    devices:
+      '0x00158d00054c2476':
+        friendly_name: 'aqara/wsdcgq12lm/sitting-room'
+      '0x000b57fffe0d96c2':
+        friendly_name: 'ikea/hallway/lamp'
+      '0x90fd9ffffe04be6e':
+        friendly_name: 'ikea/kitchen/lamp'
+      '0x680ae2fffe129fac':
+        friendly_name: 'ikea/kitchen/signal-repeater'
+      '0x680ae2fffe1c5c77':
+        friendly_name: 'ikea/kitchen/blind-left'
+      '0x680ae2fffe8c9cf8':
+        friendly_name: 'ikea/kitchen/blind-centre-left'
+      '0xec1bbdfffe985ebe':
+        friendly_name: 'ikea/kitchen/blind-centre-right'
+      '0x680ae2fffe1c3b8d':
+        friendly_name: 'ikea/kitchen/blind-right'
+      '0x00158d00068b7170':
+        friendly_name: 'aqara/wsdcgq12lm/hallway'
+      '0x00158d00068b92eb':
+        friendly_name: 'aqara/wsdcgq12lm/downstairs-toilet'
+      '0x00158d00067955d5':
+        friendly_name: 'aqara/wsdcgq12lm/utility-room'
+      '0x00158d0006a03a86':
+        friendly_name: 'aqara/wsdcgq12lm/kitchen-extension'
+      '0x00158d0006a03ae5':
+        friendly_name: 'aqara/wsdcgq12lm/kitchen-main'
+      '0x00158d000693a944':
+        friendly_name: 'aqara/wsdcgq12lm/kitchen-snug'
+      '0x00158d000693b91b':
+        friendly_name: 'aqara/mccgq11lm/kitchen-main-back-door'
+      '0x00158d00068b8581':
+        friendly_name: 'aqara/mccgq11lm/kitchen-secondary-back-door'
+      '0x00158d00068b85c8':
+        friendly_name: 'aqara/mccgq11lm/garage-door'
+      '0x00158d000693b930':
+        friendly_name: 'aqara/mccgq11lm/front-door'
+      '0x00158d0006a15847':
+        friendly_name: 'aqara/rtcgq11lm/sitting-room'
+      '0x000d6ffffe2a5da3':
+        friendly_name: 'ikea/e1603-e1702/control-outlet'
+      '0x00158d0006a0d121':
+        friendly_name: 'aqara/rtcgq11lm/hallway-east'
+
+    serial:
+      # Location of CC2531 USB sniffer
+      port: /dev/ttyACM0
