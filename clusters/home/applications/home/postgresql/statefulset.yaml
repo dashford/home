@@ -23,6 +23,8 @@ spec:
           env:
             - name: POSTGRES_PASSWORD
               value: "just-testing"
+            - name: POSTGRES_DB
+              value: "home-assistant"
           ports:
             - containerPort: 5432
               name: postgresql
