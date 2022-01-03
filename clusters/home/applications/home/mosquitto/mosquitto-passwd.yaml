@@ -1,16 +1,16 @@
-#apiVersion: bitnami.com/v1alpha1
-#kind: SealedSecret
-#metadata:
-#  creationTimestamp: null
-#  name: mosquitto-passwd
-#  namespace: home
-#spec:
-#  encryptedData:
-#    passwd: AgCL3f57jGK1xpFFxBYBPfuecNOt8XzwqWyGgYtYue2VjyJzRCBfz+N4rFmq2Z5iB6PVCxm9O9HLxOUNCspuIXCytKjBrCUusQc7gjQ883Q5VUloBHM5/NLuFpkrI0c5U+imGAFm8AfjgQqvco/+fYx+ZW9CWXGIeznU3aKJYfOB8ulXtLjm6i7M9uBt70YUGmLMY2aI9LXyjakDewkbpawK3UYNwGR053wl4EwjUFa3wn1g1cl51bij/vM7/dS5FjbHiERtczmqULFwGgoUdHgJg2FDlK8zro2XJla8wuIxT2r1QgZ2mD/YM6Ea2uoL+qDYT0ynvcS1pSoQU0Kx4eNqHOVbRHAqQXnt0PGcdhOYUaUIVYF5bZsUKb29MRatt7DJMsw59SG5RfcEcAGXSzo/T2wzDiDIi9VSg4N0xLDmxIxlh2o6ZzBA3pX/NhJfNnKcNr+d4biV0+bcXroae7S4DfjdbgX/EQrIf2qjayOvFpdTanPP5vDOwrKsTNX7gQXILB/+Tu2MECueOaihwslHlGwUtDKoSD3JiGRxJdIeG+N6MZQnHp6hJVX0ZYFMU0ICPrSaDkyiSA15q/Vc3WhhMQt9Php5QB9EX95JsaEK3J7KrxdVpJ3zKjqMaEgk2JT2sYxxy36aVa1QymSA4A0XdmjHA9wIKB8yDxrPf5Dvtu2FXo8XH6pBghcZk//LI0zFOgg9Wh7hm7AVLBN+HkLPQ8/9bkdxSQITgbdX6NZWRWwZTtQpGG8ulAeRfgdClYh5vPv5UPwGfPROhT4izUoM66exsamM9p5wDGUKy9bGKMHwUoFMz6sajp3SvmqRwwQvltKYyPsS3SZEQKSGnjaDdlIC1nZPCg==
-#  template:
-#    data: null
-#    metadata:
-#      creationTimestamp: null
-#      name: mosquitto-passwd
-#      namespace: home
-#
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: mosquitto-passwd
+  namespace: home
+spec:
+  encryptedData:
+    passwd: AgCL3f57jGK1xpFFxBYBPfuecNOt8XzwqWyGgYtYue2VjyJzRCBfz+N4rFmq2Z5iB6PVCxm9O9HLxOUNCspuIXCytKjBrCUusQc7gjQ883Q5VUloBHM5/NLuFpkrI0c5U+imGAFm8AfjgQqvco/+fYx+ZW9CWXGIeznU3aKJYfOB8ulXtLjm6i7M9uBt70YUGmLMY2aI9LXyjakDewkbpawK3UYNwGR053wl4EwjUFa3wn1g1cl51bij/vM7/dS5FjbHiERtczmqULFwGgoUdHgJg2FDlK8zro2XJla8wuIxT2r1QgZ2mD/YM6Ea2uoL+qDYT0ynvcS1pSoQU0Kx4eNqHOVbRHAqQXnt0PGcdhOYUaUIVYF5bZsUKb29MRatt7DJMsw59SG5RfcEcAGXSzo/T2wzDiDIi9VSg4N0xLDmxIxlh2o6ZzBA3pX/NhJfNnKcNr+d4biV0+bcXroae7S4DfjdbgX/EQrIf2qjayOvFpdTanPP5vDOwrKsTNX7gQXILB/+Tu2MECueOaihwslHlGwUtDKoSD3JiGRxJdIeG+N6MZQnHp6hJVX0ZYFMU0ICPrSaDkyiSA15q/Vc3WhhMQt9Php5QB9EX95JsaEK3J7KrxdVpJ3zKjqMaEgk2JT2sYxxy36aVa1QymSA4A0XdmjHA9wIKB8yDxrPf5Dvtu2FXo8XH6pBghcZk//LI0zFOgg9Wh7hm7AVLBN+HkLPQ8/9bkdxSQITgbdX6NZWRWwZTtQpGG8ulAeRfgdClYh5vPv5UPwGfPROhT4izUoM66exsamM9p5wDGUKy9bGKMHwUoFMz6sajp3SvmqRwwQvltKYyPsS3SZEQKSGnjaDdlIC1nZPCg==
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: mosquitto-passwd
+      namespace: home
+
