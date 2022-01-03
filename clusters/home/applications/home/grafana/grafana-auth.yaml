@@ -1,9 +1,9 @@
-apiVersion: v1
-data:
-  admin-password: c2M5OGhmbzM0bm9laXdqYzg5MGowY3c=
-  admin-user: YWRtaW4=
-kind: Secret
-metadata:
-  creationTimestamp: null
-  name: grafana-auth
-  namespace: home
+#apiVersion: v1
+#data:
+#  admin-password: c2M5OGhmbzM0bm9laXdqYzg5MGowY3c=
+#  admin-user: YWRtaW4=
+#kind: Secret
+#metadata:
+#  creationTimestamp: null
+#  name: grafana-auth
+#  namespace: home
